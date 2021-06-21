@@ -1,23 +1,38 @@
-import { StatusBar } from 'expo-status-bar';
+import 'react-native-gesture-handler';
 import React from 'react';
-import { StyleSheet, Image, Text, View } from 'react-native';
-import splash from './assets/splash.png';
+//import { StyleSheet, Image, Text, View, TouchableOpacity } from 'react-native';
+//import splash from './assets/splash.png';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
-export default function App() {
+//import screens
+import Homescreen from './Screens/Homescreen';
+import Signup from './Screens/Signup';
+import Signin from './Screens/Signin';
+
+const stack = createStackNavigator();
+
+const Auth = () => {
   return (
-    <View style={styles.container}>
-      <Image source={splash} style={{ height: 100, width: 100 }} />
-      <Text>Hospital Finder</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+    <stack.Navigator initialRouteName="Homescreen">
+      <stack.Screen
+        name="Homescreen"
+        component={Homescreen}
+      />
+      <stack.Screen
+        name="Signup"
+        component={Signup}
+      />
+      <stack.Screen
+        name="Signin"
+        component={Signin}
+      />
+    </stack.Navigator>
+    </NavigationContainer>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
+
+export default Auth;
