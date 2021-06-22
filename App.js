@@ -9,6 +9,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Homescreen from './Screens/Homescreen';
 import Signup from './Screens/Signup';
 import Signin from './Screens/Signin';
+import Details from './Screens/Details';
 
 const stack = createStackNavigator();
 
@@ -27,6 +28,10 @@ const Auth = () => {
       <stack.Screen
         name="Signin"
         component={Signin}
+      />
+      <stack.Screen 
+      name="Details"
+      component={Details}
       />
     </stack.Navigator>
     </NavigationContainer>
