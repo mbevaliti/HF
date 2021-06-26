@@ -1,11 +1,15 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, Image, TouchableOpacity } from 'react-native';
-import splash from '../assets/splash.png';
+import { StyleSheet, Text, View, TextInput, ImageBackground, Image, TouchableOpacity } from 'react-native';
+import { Card } from 'react-native-elements';
+//import { splash } from '../assets/splash';
 
 const Details = ({ }) => {
     return (
-     <View  style={styles.container}>
-        <Text>Buy Medicines</Text>
+        <View style={styles.container}>
+            <Card>
+                <Image style={styles.Image} source={require('../Image/logo.png')} />
+                <Text style={styles.text}>Painkillers</Text>
+            </Card>
         </View>
     );
 };
@@ -13,12 +17,12 @@ const Details = ({ }) => {
 export default Details;
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
+    // container: {
+    //   flex: 1,
+    // backgroundColor: '#fff',
+    //alignItems: 'center',
+    //justifyContent: 'center',
+    //},
     button: {
         backgroundColor: '#999594',
         alignItems: 'center',
@@ -41,5 +45,14 @@ const styles = StyleSheet.create({
         marginTop: 10,
         marginBottom: 10,
         alignItems: 'center',
+    },
+    text: {
+        alignItems: 'center',
+        paddingLeft: 85,
+        paddingRight: 85,
+    },
+    Image: {
+        width: 150,
+        height: 150,
     },
 });
