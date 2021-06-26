@@ -4,9 +4,9 @@ import splash from '../assets/splash.png';
 
 const Details = ({ }) => {
     return (
-
-        <Text></Text>
-
+     <View  style={styles.container}>
+        <Text>Buy Medicines</Text>
+        </View>
     );
 };
 
