@@ -31,7 +31,7 @@ const Signup = ({ navigation }) => {
                     .doc(uid)
                     .set(data)
                     .then(() => {
-                        navigation.navigate('Signin', { user: data })
+                        navigation.replace('Signin', { user: data })
                     })
                     .catch((error) => {
                         alert(error)

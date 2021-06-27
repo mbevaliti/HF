@@ -4,6 +4,7 @@ import { StyleSheet, Text, TextInput, View, Image, TouchableOpacity } from 'reac
 import splash from '../assets/splash.png';
 import { firebase } from '../src/firebase/config';
 
+
 const Signin = ({ navigation }) => {
 
     const [email, setEmail] = useState('')
@@ -24,7 +25,7 @@ const Signin = ({ navigation }) => {
                             return;
                         }
                         const user = firestoreDocument.data()
-                        navigation.navigate('Details', { user })
+                        navigation.replace('DrawerNavigationRoutes', { user })
                     })
                     .catch(error => {
                         alert(error)

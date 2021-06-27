@@ -1,16 +1,69 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, ImageBackground, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, Alert, Text, View, TextInput, ImageBackground, Image, ScrollView, SafeAreaView, TouchableOpacity } from 'react-native';
 import { Card } from 'react-native-elements';
+//import * as Location from 'expo-location';
+import MapView from 'react-native-open-maps';
+//import NumericInput from 'react-native-NumericInput';
 //import { splash } from '../assets/splash';
 
 const Details = ({ }) => {
+
+
+    const onFindPress = () => {
+        navigator.geolocation.getCurrentPosition(
+            position => {
+                const location = JSON.stringify(position);
+                this.setState({ location });
+            },
+            error => Alert.alert(error.message),
+            { enableHighAccuracy: true, timeout: 2000, maximumAge: 1000 }
+        );
+    };
+
     return (
-        <View style={styles.container}>
-            <Card>
-                <Image style={styles.Image} source={require('../Image/logo.png')} />
-                <Text style={styles.text}>Painkillers</Text>
-            </Card>
-        </View>
+        <SafeAreaView style={styles.container}>
+            <ScrollView>
+                <Card style={styles.Card}>
+                    <Image style={styles.Image} source={require('../Image/logo.png')}>
+                    </Image>
+                    <TouchableOpacity style={styles.button}
+                      onPress={() => onFindPress()}>
+                        <Text>
+                            Find
+                        </Text>
+                    </TouchableOpacity>
+                </Card>
+                <Card style={styles.Card}>
+                    <Image style={styles.Image} source={require('../Image/logo.png')}>
+                    </Image>
+
+                    <TouchableOpacity style={styles.button}
+                        onPress={() => onFindPress()}>
+                        <Text>
+                            Find
+                        </Text>
+                    </TouchableOpacity>
+                </Card>
+                <Card style={styles.Card}>
+                    <Image style={styles.Image} source={require('../Image/logo.png')}>
+                    </Image>
+                    <TouchableOpacity style={styles.button}>
+                        <Text>
+                            Find
+                        </Text>
+                    </TouchableOpacity>
+                </Card>
+                <Card style={styles.Card}>
+                    <Image style={styles.Image} source={require('../Image/logo.png')}>
+                    </Image>
+                    <TouchableOpacity style={styles.button}>
+                        <Text>
+                            Find
+                        </Text>
+                    </TouchableOpacity>
+                </Card>
+            </ScrollView>
+        </SafeAreaView>
     );
 };
 
@@ -30,7 +83,7 @@ const styles = StyleSheet.create({
         marginTop: 10,
         borderRadius: 50,
         height: 25,
-        width: 150,
+        width: 50,
         color: 'black',
 
     },
@@ -54,5 +107,9 @@ const styles = StyleSheet.create({
     Image: {
         width: 150,
         height: 150,
+    },
+    Card: {
+        justifyContent: 'center',
+
     },
 });
