@@ -6,7 +6,7 @@ import MapView from 'react-native-open-maps';
 //import NumericInput from 'react-native-NumericInput';
 import splash from '../assets/splash.png';
 
-const Mainpage = ({ }) => {
+const Internal = ({ }) => {
 
     return (
         <SafeAreaView style={styles.container}>
@@ -45,7 +45,7 @@ const Mainpage = ({ }) => {
     );
 };
 
-export default Mainpage;
+export default Internal;
 
 const styles = StyleSheet.create({
     container: {
