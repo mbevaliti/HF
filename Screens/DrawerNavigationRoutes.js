@@ -6,6 +6,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import Settings from '../Screens/Settings';
 import Sidebar from './Components/Sidebar';
 import Details from '../Screens/Details';
+import Mainpage from './Mainpage';
 
 
 const stack = createStackNavigator();
@@ -19,7 +20,7 @@ const DetailsScreenStack = ({ navigation }) => {
                 component={Details}
                 options={{
                     title: 'Details',
-
+                    headerShown: false,
                 }} />
         </stack.Navigator>
     );
@@ -33,12 +34,12 @@ const settingScreenStack = ({ navigation }) => {
                 component={Settings}
                 options={{
                     title: 'Settings',
+                    headerShown:false
                 }} />
 
         </stack.Navigator>
     );
 };
-
 const DrawerNavigationRoutes = (props) => {
     return (
         <Drawer.Navigator

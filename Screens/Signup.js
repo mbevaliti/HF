@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, TextInput, Image, TouchableOpacity } from 'reac
 import splash from '../assets/splash.png';
 import { useState } from 'react';
 import { firebase } from '../src/firebase/config';
+import nexx from  '../Image/nexx.png';
 
 
 const Signup = ({ navigation }) => {
@@ -45,7 +46,7 @@ const Signup = ({ navigation }) => {
     return (
 
         <View style={styles.container}>
-            <Image source={splash} style={{ height: 100, width: 100 }} />
+             <Image source={splash} style={{ height: 100, width: 100 }} />
             <TextInput style={styles.input}
                 placeholder="Enter Name"
                 keyboardType="default"
@@ -104,6 +105,7 @@ const styles = StyleSheet.create({
 
     },
     input: {
+        backgroundColor:'white',
         color: 'black',
         borderColor: 'black',
         borderWidth: 1,

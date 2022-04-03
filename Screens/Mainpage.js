@@ -6,7 +6,7 @@ import MapView from 'react-native-open-maps';
 //import NumericInput from 'react-native-NumericInput';
 import splash from '../assets/splash.png';
 
-const Details = ({navigation}) => {
+const Mainpage = ({ }) => {
 
     return (
         <SafeAreaView style={styles.container}>
@@ -14,31 +14,12 @@ const Details = ({navigation}) => {
                <View style={styles.nav} >
                <Image source={splash} style={{ height: 50, width: 50, alignSelf:'center', }} />
                </View>
-               <View style={styles.body}>
-               <Text style={styles.txt}>Select Branch</Text>
-               </View>  
-               
-            <TouchableOpacity style={styles.button}
-               onPress={() => navigation.navigate('Mainpage')}
-               >
-                <Text style={styles.text}>Machakos</Text>
-            </TouchableOpacity>     
-            <TouchableOpacity style={styles.button2}
-            onPress={() => navigation.navigate('Mainpage')}
-               >
-                <Text style={styles.text}>Masii</Text>
-            </TouchableOpacity>   
-            <TouchableOpacity style={styles.button3}
-              onPress={() => navigation.navigate('Mainpage')}
-               >
-                <Text style={styles.text}>Wote</Text>
-            </TouchableOpacity>   
-         
+              
         </SafeAreaView>
     );
 };
 
-export default Details;
+export default Mainpage;
 
 const styles = StyleSheet.create({
     container: {

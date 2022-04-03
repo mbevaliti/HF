@@ -10,6 +10,7 @@ import { useEffect, useState } from 'react';
 import Homescreen from './Screens/Homescreen';
 import Signup from './Screens/Signup';
 import Signin from './Screens/Signin';
+import Mainpage from './Screens/Mainpage';
 import DrawerNavigationRoutes from './Screens/DrawerNavigationRoutes';
 
 
@@ -25,14 +26,17 @@ const Auth = () => {
         <stack.Screen
           name="Homescreen"
           component={Homescreen}
+          options={{ headerShown: false }}
         />
         <stack.Screen
           name="Signup"
           component={Signup}
+          options={{ headerShown: false }}
         />
         <stack.Screen
           name="Signin"
           component={Signin}
+          options={{ headerShown: false }}
         />
       </stack.Navigator>
     )
@@ -74,6 +78,14 @@ const App = () => {
           name="DrawerNavigationRoutes"
           component={DrawerNavigationRoutes}
           options={{ headerShown: false }}
+        />
+        <stack.Screen 
+           name="Mainpage"
+           component={Mainpage}
+           options={{
+            title: 'Mainpage',
+            headerShown: false,
+        }}
         />
       </stack.Navigator>
     </NavigationContainer>

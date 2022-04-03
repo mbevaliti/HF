@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { StyleSheet, Text, TextInput, View, Image, TouchableOpacity } from 'react-native';
 import splash from '../assets/splash.png';
 import { firebase } from '../src/firebase/config';
+import nexx from  '../Image/nexx.png';
 
 
 const Signin = ({ navigation }) => {
@@ -71,6 +72,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     input: {
+        backgroundColor:'white',
         color: 'black',
         borderColor: 'black',
         borderWidth: 1,
