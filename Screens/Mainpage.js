@@ -6,7 +6,7 @@ import MapView from 'react-native-open-maps';
 //import NumericInput from 'react-native-NumericInput';
 import splash from '../assets/splash.png';
 
-const Mainpage = ({ }) => {
+const Mainpage = ({navigation}) => {
 
     return (
         <SafeAreaView style={styles.container}>
@@ -16,12 +16,12 @@ const Mainpage = ({ }) => {
                </View>
                <View style={{flexDirection:'row', alignSelf:'center', marginTop:'100%', height:'20%', width:'100%', alignItems:'center'}}>
                <TouchableOpacity style={styles.button}
-              // onPress={() => navigation.navigate('Mainpage')}
+              onPress={() => navigation.navigate('Product')}
                >
                 <Text style={styles.text}>Product Inquiry</Text>
             </TouchableOpacity>     
             <TouchableOpacity style={styles.button2}
-           // onPress={() => navigation.navigate('Mainpage')}
+           onPress={() => navigation.navigate('Vendor')}
                >
                 <Text style={styles.text}>Vendor Operations</Text>
             </TouchableOpacity> 
@@ -34,7 +34,7 @@ const Mainpage = ({ }) => {
                 <Text style={styles.text}>Organizational OPerations</Text>
             </TouchableOpacity>   
             <TouchableOpacity style={styles.button4}
-             // onPress={() => navigation.navigate('Mainpage')}
+             onPress={() => navigation.navigate('Internal')}
                >
                 <Text style={styles.text}>Internal Operations</Text>
             </TouchableOpacity>   

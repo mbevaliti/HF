@@ -11,8 +11,14 @@ import Homescreen from './Screens/Homescreen';
 import Signup from './Screens/Signup';
 import Signin from './Screens/Signin';
 import Mainpage from './Screens/Mainpage';
+import Vendor from './Screens/Vendor';
+import Internal from './Screens/Internal';
+import Product from './Screens/Product';
+import Stocktake from './Screens/Stocktake';
+import Stockadjustment from './Screens/Stockadjustment';
 import DrawerNavigationRoutes from './Screens/DrawerNavigationRoutes';
-
+import Purchaseorder from './Screens/Purchaseorder';
+import Order from './Screens/Order';
 
 const stack = createStackNavigator();
 
@@ -84,6 +90,62 @@ const App = () => {
            component={Mainpage}
            options={{
             title: 'Mainpage',
+            headerShown: false,
+        }}
+        />
+         <stack.Screen 
+           name="Internal"
+           component={Internal}
+           options={{
+            title: 'Internal',
+            headerShown: false,
+        }}
+        />
+         <stack.Screen 
+           name="Product"
+           component={Product}
+           options={{
+            title: 'Product',
+            headerShown: false,
+        }}
+        />
+         <stack.Screen 
+           name="Vendor"
+           component={Vendor}
+           options={{
+            title: 'Vendor',
+            headerShown: false,
+        }}
+        />
+        <stack.Screen 
+           name="Stocktake"
+           component={Stocktake}
+           options={{
+            title: 'Stocktake',
+            headerShown: false,
+        }}
+        />
+          <stack.Screen 
+           name="Stockadjustment"
+           component={Stockadjustment}
+           options={{
+            title: 'Stockadjustment',
+            headerShown: false,
+        }}
+        />
+        <stack.Screen 
+           name="Purchaseorder"
+           component={Purchaseorder}
+           options={{
+            title: 'Purchaseorder',
+            headerShown: false,
+        }}
+        />
+          <stack.Screen 
+           name="Order"
+           component={Order}
+           options={{
+            title: 'Order',
             headerShown: false,
         }}
         />
